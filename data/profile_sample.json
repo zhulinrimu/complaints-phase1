@@ -1,0 +1,185 @@
+{
+  "source": "C:/Users/z3412/WorkBuddy/2026-10-15-20-19-49/complaints_phase1/data/sample_complaints.csv",
+  "rows": 548,
+  "columns": 16,
+  "width_mismatch_rows": 0,
+  "duplicate_complaint_ids": 0,
+  "column_profiles": {
+    "Date received": {
+      "name": "Date received",
+      "count": 548,
+      "missing": 0,
+      "missing_rate": 0.0,
+      "distinct": 490,
+      "min": "2024-01-25T19:36:29.000Z",
+      "max": "2026-02-16T22:36:49.000Z",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "Product": {
+      "name": "Product",
+      "count": 548,
+      "missing": 0,
+      "missing_rate": 0.0,
+      "distinct": 11,
+      "min": "Checking or savings account",
+      "max": "Vehicle loan or lease",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "Sub-product": {
+      "name": "Sub-product",
+      "count": 548,
+      "missing": 0,
+      "missing_rate": 0.0,
+      "distinct": 28,
+      "min": "Auto debt",
+      "max": "Virtual currency",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "Issue": {
+      "name": "Issue",
+      "count": 548,
+      "missing": 0,
+      "missing_rate": 0.0,
+      "distinct": 40,
+      "min": "Applying for a mortgage or refinancing an existing mortgage",
+      "max": "Written notification about debt",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "Sub-issue": {
+      "name": "Sub-issue",
+      "count": 548,
+      "missing": 21,
+      "missing_rate": 0.0383,
+      "distinct": 66,
+      "min": "Account information incorrect",
+      "max": "You told them to stop contacting you, but they keep trying",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "Consumer complaint narrative": {
+      "name": "Consumer complaint narrative",
+      "count": 548,
+      "missing": 487,
+      "missing_rate": 0.8887,
+      "distinct": 61,
+      "min": "As of XX/XX/XXXX, I have reached 120 payments on my student loans consolidated in XXXX and now serviced by MOHELA. I have 115 qualifying payments and 5 that I need to buyback due to the save injunction in XXXX. \n\nI am being blocked from entering the 120 count forbearance and from applying for buyback because of an issue I've been told is a glitch with MOHELA providing payment information and FSA website. Neither party has been able to correct for months despite several calls and reconsideration requests. \n\nThe 'glitch ' in XX/XX/XXXX after recertifying my eligible employer, 4 months were dropped from one of my 3 consolidated loans ( see photos ). The count went from XX/XX/XXXX to XX/XX/XXXX, completely missing XXXX XXXX XXXX and XXXX. I filed a reconsideration to get those months added back in ( as they were noted on my other 2 consolidated loans ), and by XXXX of XXXX, 10 years of payments vanished from this loan count. It now skips from XX/XX/XXXX to XX/XX/XXXX and only shows 10 eligible payments have been made. 110 months are missing.\n\nAn FSA agent filed some kind of urgent status on my reconsideration request. FSA said its both a glitch and a count reporting issue from MOHELA. MOHELA says its FSA glitch.\n\nI dont know what else to do to get this rectified prior to being forced to make payments over the 120 required. Payment 121 is now due on XX/XX/XXXX after being notified by MOHLEA today that I was kicked off of the 120 month count forbearance. \n\n\nPhotos below showing the same loan with the initial missing 4 months and 104 payments. Then showing 10 payments and 110 missing months.",
+      "max": "was enrolled at XXXX but decided not to attend the classes. I contacted the school by phone before classes began to inform them I would not be attending. During that call, the school representative assured me that the loan would not be used unless I attended classes. \nAfterward, I also sent an email to the school confirming that I had an open loan through them despite not attending the classes. The school did not take any further action to correct the loan, and the loan appears to have been processed incorrectly. \nI am seeking correction of this account because the information reported is inaccurate, as I never attended classes and was told the loan would not be used. \nSupporting details : Contact by phone XXXX XXXX XXXX XXXX ( years ago, before classes started ) Email sent : XXXX XXXX XXXX XXXX XXXX",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "Company public response": {
+      "name": "Company public response",
+      "count": 548,
+      "missing": 372,
+      "missing_rate": 0.6788,
+      "distinct": 6,
+      "min": "Company believes complaint caused principally by actions of third party outside the control or direction of the company",
+      "max": "Company has responded to the consumer and the CFPB and chooses not to provide a public response",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "Company": {
+      "name": "Company",
+      "count": 548,
+      "missing": 0,
+      "missing_rate": 0.0,
+      "distinct": 162,
+      "min": "AMERICA FIRST FEDERAL CREDIT UNION",
+      "max": "Your Favorite Lenders, Inc",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "State": {
+      "name": "State",
+      "count": 548,
+      "missing": 2,
+      "missing_rate": 0.0036,
+      "distinct": 38,
+      "min": "AL",
+      "max": "WY",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "ZIP code": {
+      "name": "ZIP code",
+      "count": 548,
+      "missing": 4,
+      "missing_rate": 0.0073,
+      "distinct": 381,
+      "min": "009XX",
+      "max": "XXXXX",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 55
+    },
+    "Tags": {
+      "name": "Tags",
+      "count": 548,
+      "missing": 509,
+      "missing_rate": 0.9288,
+      "distinct": 3,
+      "min": "Older American",
+      "max": "Servicemember",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "Submitted via": {
+      "name": "Submitted via",
+      "count": 548,
+      "missing": 0,
+      "missing_rate": 0.0,
+      "distinct": 3,
+      "min": "Phone",
+      "max": "Web",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "Date sent to company": {
+      "name": "Date sent to company",
+      "count": 548,
+      "missing": 2,
+      "missing_rate": 0.0036,
+      "distinct": 507,
+      "min": "2024-01-25T19:56:42.000Z",
+      "max": "2026-06-29T15:42:05.000Z",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "Company response to consumer": {
+      "name": "Company response to consumer",
+      "count": 548,
+      "missing": 217,
+      "missing_rate": 0.396,
+      "distinct": 4,
+      "min": "Closed with explanation",
+      "max": "Untimely response",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "Timely response?": {
+      "name": "Timely response?",
+      "count": 548,
+      "missing": 0,
+      "missing_rate": 0.0,
+      "distinct": 2,
+      "min": "No",
+      "max": "Yes",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    },
+    "Complaint ID": {
+      "name": "Complaint ID",
+      "count": 548,
+      "missing": 4,
+      "missing_rate": 0.0073,
+      "distinct": 544,
+      "min": "10143247",
+      "max": "9993327",
+      "nonconforming_date": 0,
+      "nonconforming_zip": 0
+    }
+  }
+}
