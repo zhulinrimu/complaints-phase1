@@ -20,7 +20,14 @@ def esc(s: str) -> str:
 
 def inline(s: str) -> str:
     s = esc(s)
-    s = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", r'<img src="\2" alt="\1">', s)
+    def _img(m):
+        alt, src = m.group(1), m.group(2)
+        if src.lower().endswith(".svg"):
+            p = ROOT / src
+            if p.exists():
+                return f'<figure style="margin:6px 0">{p.read_text(encoding="utf-8")}</figure>'
+        return f'<img src="{src}" alt="{alt}">'
+    s = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", _img, s)
     s = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"`([^`]+)`", r"<code>\1</code>", s)
     return s
@@ -113,6 +120,8 @@ pre { background: #f5f5f5; padding: 8px; overflow: auto; font-size: 9pt;
       border: 1px solid #e0e0e0; }
 code { background: #f0f0f0; padding: 1px 3px; font-family: Consolas, monospace; }
 img { max-width: 100%; display: block; margin: 6px auto; }
+figure { margin: 6px 0; }
+figure svg { display: block; max-width: 100%; height: auto; }
 ul { margin: 4px 0; }
 </style>
 """

@@ -1,19 +1,19 @@
 # 阶段 1 报告草案：CFPB 投诉数据流式质量剖析器
 ## Problem & Computational Prototype
 
-> **文件名约定**：`complaintprofiler_phase1_report.pdf`（如你们有规定的队名，请用规定名替换 `complaintprofiler`）
+> **文件名约定**：`gti_phase1_report.pdf`（团队名「GTI研发部门」；如你们有规定的队名/文件名格式请按规定的来）
 > **页数**：4–6 页（不含参考文献与附录）｜ 字体 10–12pt ｜ 行距单倍/1.15 ｜ 边距 ≥2cm
-> 本草案内容（含团队信息、分工、里程碑、个人贡献）已填好；唯一待补项是 §1 的**仓库 URL**（需先把代码推到 GitHub/GitLab 后填入）。
+> 本草案内容（含团队信息、仓库链接、分工、里程碑、个人贡献）已全部填好。
 
 ---
 
 ## 1. 标题与项目信息
 - 项目标题：CFPB 消费者投诉数据流式质量剖析器
-- 团队名称：ComplaintProfiler（如有规定队名请替换）
+- 团队名称：GTI研发部门
 - 团队成员：朱建坤（学号 85263241）、郑智（学号 85263238）
 - 日期：2026-10-15 ｜ 阶段：Phase 1
-- 仓库 URL：【待推送后填写：例如 `https://github.com/<你的账号>/complaints-phase1`】
-- 提交 commit / tag：`phase-1-submission`（已在本地仓库创建此标签；推送远程后请把上面 URL 填于此）
+- 仓库 URL：https://github.com/zhulinrimu/complaints-phase1
+- 提交 commit / tag：`phase-1-submission`
 
 > **生成式 AI 使用声明（作业指导要求公开）**：本项目的原型代码（`profiler/profiler.py`）与报告初稿在生成式 AI 助手 **WorkBuddy**（基于大语言模型）协助下完成；所有结果（剖析输出、数据字典、11 项测试）均由团队成员独立运行与验证，AI 未替代本项目的智力工作。未使用外部预训练模型或付费 API；运行仅依赖 Python 标准库与 `pytest`。
 
