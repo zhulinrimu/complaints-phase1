@@ -15,7 +15,7 @@ pre { background: #f5f5f5; padding: 8px; overflow: auto; font-size: 9pt;
       border: 1px solid #e0e0e0; }
 code { background: #f0f0f0; padding: 1px 3px; font-family: Consolas, monospace; }
 img { max-width: 100%; display: block; margin: 6px auto; }
-figure { margin: 6px 0; }
+figure { margin: 6px 0; break-inside: avoid; page-break-inside: avoid; }
 figure svg { display: block; max-width: 100%; height: auto; }
 ul { margin: 4px 0; }
 </style>
@@ -57,72 +57,72 @@ ul { margin: 4px 0; }
 <ul><li>关键结果（来自 <code>data_dictionary.md</code>）：</li></ul>
 <table><thead><tr><th>发现</th><th>数值</th><th>含义</th></tr></thead><tbody><tr><td>叙述文本缺失</td><td>487 / 548 = <strong>88.9%</strong></td><td>多数投诉无自由文本，NLP 任务需谨慎</td></tr><tr><td>Tags 缺失</td><td>509 / 548 = <strong>92.9%</strong></td><td>高缺失，建模时或作弃权</td></tr><tr><td>非标准 ZIP</td><td><strong>55</strong> 个（<code>009XX</code>/<code>XXXXX</code>）</td><td>多为隐私掩码，需定义为"缺失/掩码"而非错误</td></tr><tr><td>缺 Complaint ID</td><td><strong>4</strong> 行</td><td>影响去重与关联，需决定丢弃或补 ID</td></tr><tr><td>重复 Complaint ID</td><td>0（样本）</td><td>样本内暂无重复</td></tr><tr><td>行宽不匹配</td><td>0</td><td>结构整洁</td></tr><tr><td><code>Timely response?</code></td><td>2 值（Yes/No）</td><td>可作为阶段 3 预测目标</td></tr></tbody></table>
 <ul><li><strong>图表</strong>：数据字典表格即主要证据；图 1 为各列缺失率条形图，由 <code>profiler</code> 输出计算、脚本可复现。</li></ul>
-<p><figure style="margin:6px 0"><svg xmlns="http://www.w3.org/2000/svg" width="860" height="550" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">
-<text x="10" y="24" font-size="15" font-weight="bold">图 1. 各列缺失率（样本 548 行）</text>
-<text x="10" y="58" font-size="12">收到日期</text>
-<rect x="260" y="44" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="44" width="1.0" height="18" fill="#2e7d32"/>
-<text x="786" y="58" font-size="12" fill="#333">0.0%</text>
-<text x="10" y="88" font-size="12">产品</text>
-<rect x="260" y="74" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="74" width="1.0" height="18" fill="#2e7d32"/>
-<text x="786" y="88" font-size="12" fill="#333">0.0%</text>
-<text x="10" y="118" font-size="12">子产品</text>
-<rect x="260" y="104" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="104" width="1.0" height="18" fill="#2e7d32"/>
-<text x="786" y="118" font-size="12" fill="#333">0.0%</text>
-<text x="10" y="148" font-size="12">问题类型</text>
-<rect x="260" y="134" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="134" width="1.0" height="18" fill="#2e7d32"/>
-<text x="786" y="148" font-size="12" fill="#333">0.0%</text>
-<text x="10" y="178" font-size="12">公司</text>
-<rect x="260" y="164" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="164" width="1.0" height="18" fill="#2e7d32"/>
-<text x="786" y="178" font-size="12" fill="#333">0.0%</text>
-<text x="10" y="208" font-size="12">提交渠道</text>
-<rect x="260" y="194" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="194" width="1.0" height="18" fill="#2e7d32"/>
-<text x="786" y="208" font-size="12" fill="#333">0.0%</text>
-<text x="10" y="238" font-size="12">及时响应?</text>
-<rect x="260" y="224" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="224" width="1.0" height="18" fill="#2e7d32"/>
-<text x="786" y="238" font-size="12" fill="#333">0.0%</text>
-<text x="10" y="268" font-size="12">州</text>
-<rect x="260" y="254" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="254" width="1.9" height="18" fill="#2e7d32"/>
-<text x="786" y="268" font-size="12" fill="#333">0.4%</text>
-<text x="10" y="298" font-size="12">发往公司日期</text>
-<rect x="260" y="284" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="284" width="1.9" height="18" fill="#2e7d32"/>
-<text x="786" y="298" font-size="12" fill="#333">0.4%</text>
-<text x="10" y="328" font-size="12">邮编</text>
-<rect x="260" y="314" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="314" width="3.8" height="18" fill="#2e7d32"/>
-<text x="786" y="328" font-size="12" fill="#333">0.7%</text>
-<text x="10" y="358" font-size="12">投诉ID</text>
-<rect x="260" y="344" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="344" width="3.8" height="18" fill="#2e7d32"/>
-<text x="786" y="358" font-size="12" fill="#333">0.7%</text>
-<text x="10" y="388" font-size="12">子问题</text>
-<rect x="260" y="374" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="374" width="19.9" height="18" fill="#2e7d32"/>
-<text x="786" y="388" font-size="12" fill="#333">3.8%</text>
-<text x="10" y="418" font-size="12">公司处理结论</text>
-<rect x="260" y="404" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="404" width="205.9" height="18" fill="#ef6c00"/>
-<text x="786" y="418" font-size="12" fill="#333">39.6%</text>
-<text x="10" y="448" font-size="12">公司公开回应</text>
-<rect x="260" y="434" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="434" width="353.0" height="18" fill="#c62828"/>
-<text x="786" y="448" font-size="12" fill="#333">67.9%</text>
-<text x="10" y="478" font-size="12">消费者叙述</text>
-<rect x="260" y="464" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="464" width="462.1" height="18" fill="#c62828"/>
-<text x="786" y="478" font-size="12" fill="#333">88.9%</text>
-<text x="10" y="508" font-size="12">标签</text>
-<rect x="260" y="494" width="520" height="18" fill="#eceff1"/>
-<rect x="260" y="494" width="483.0" height="18" fill="#c62828"/>
-<text x="786" y="508" font-size="12" fill="#333">92.9%</text>
+<p><figure style="margin:6px 0"><svg xmlns="http://www.w3.org/2000/svg" width="820" height="496" viewBox="0 0 820 496" preserveAspectRatio="xMidYMid meet" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">
+<text x="10" y="26" font-size="15" font-weight="bold">图 1. 各列缺失率（样本 548 行）</text>
+<text x="10" y="60" font-size="12">收到日期</text>
+<rect x="220" y="47" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="47" width="1.0" height="16" fill="#2e7d32"/>
+<text x="696" y="60" font-size="12" fill="#333">0.0%</text>
+<text x="10" y="86" font-size="12">产品</text>
+<rect x="220" y="73" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="73" width="1.0" height="16" fill="#2e7d32"/>
+<text x="696" y="86" font-size="12" fill="#333">0.0%</text>
+<text x="10" y="112" font-size="12">子产品</text>
+<rect x="220" y="99" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="99" width="1.0" height="16" fill="#2e7d32"/>
+<text x="696" y="112" font-size="12" fill="#333">0.0%</text>
+<text x="10" y="138" font-size="12">问题类型</text>
+<rect x="220" y="125" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="125" width="1.0" height="16" fill="#2e7d32"/>
+<text x="696" y="138" font-size="12" fill="#333">0.0%</text>
+<text x="10" y="164" font-size="12">公司</text>
+<rect x="220" y="151" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="151" width="1.0" height="16" fill="#2e7d32"/>
+<text x="696" y="164" font-size="12" fill="#333">0.0%</text>
+<text x="10" y="190" font-size="12">提交渠道</text>
+<rect x="220" y="177" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="177" width="1.0" height="16" fill="#2e7d32"/>
+<text x="696" y="190" font-size="12" fill="#333">0.0%</text>
+<text x="10" y="216" font-size="12">及时响应?</text>
+<rect x="220" y="203" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="203" width="1.0" height="16" fill="#2e7d32"/>
+<text x="696" y="216" font-size="12" fill="#333">0.0%</text>
+<text x="10" y="242" font-size="12">州</text>
+<rect x="220" y="229" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="229" width="1.7" height="16" fill="#2e7d32"/>
+<text x="696" y="242" font-size="12" fill="#333">0.4%</text>
+<text x="10" y="268" font-size="12">发往公司日期</text>
+<rect x="220" y="255" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="255" width="1.7" height="16" fill="#2e7d32"/>
+<text x="696" y="268" font-size="12" fill="#333">0.4%</text>
+<text x="10" y="294" font-size="12">邮编</text>
+<rect x="220" y="281" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="281" width="3.4" height="16" fill="#2e7d32"/>
+<text x="696" y="294" font-size="12" fill="#333">0.7%</text>
+<text x="10" y="320" font-size="12">投诉ID</text>
+<rect x="220" y="307" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="307" width="3.4" height="16" fill="#2e7d32"/>
+<text x="696" y="320" font-size="12" fill="#333">0.7%</text>
+<text x="10" y="346" font-size="12">子问题</text>
+<rect x="220" y="333" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="333" width="18.0" height="16" fill="#2e7d32"/>
+<text x="696" y="346" font-size="12" fill="#333">3.8%</text>
+<text x="10" y="372" font-size="12">公司处理结论</text>
+<rect x="220" y="359" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="359" width="186.1" height="16" fill="#ef6c00"/>
+<text x="696" y="372" font-size="12" fill="#333">39.6%</text>
+<text x="10" y="398" font-size="12">公司公开回应</text>
+<rect x="220" y="385" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="385" width="319.0" height="16" fill="#c62828"/>
+<text x="696" y="398" font-size="12" fill="#333">67.9%</text>
+<text x="10" y="424" font-size="12">消费者叙述</text>
+<rect x="220" y="411" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="411" width="417.7" height="16" fill="#c62828"/>
+<text x="696" y="424" font-size="12" fill="#333">88.9%</text>
+<text x="10" y="450" font-size="12">标签</text>
+<rect x="220" y="437" width="470" height="16" fill="#eceff1"/>
+<rect x="220" y="437" width="436.5" height="16" fill="#c62828"/>
+<text x="696" y="450" font-size="12" fill="#333">92.9%</text>
 </svg></figure></p>
 <p>*图 1. 各列缺失率（样本 548 行）。叙述文本与 Tags 缺失率最高（分别 88.9% 与 92.9%），提示后续建模需谨慎处理这些字段或将其视为弃权。*</p>
 <ul><li><strong>失败/负面结果</strong>：样本内未出现重复 ID 与行宽错误——这说明缺陷可能在全量中才显著，已记录为阶段 2 需全量验证的假设。</li></ul>

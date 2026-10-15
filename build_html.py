@@ -120,7 +120,7 @@ pre { background: #f5f5f5; padding: 8px; overflow: auto; font-size: 9pt;
       border: 1px solid #e0e0e0; }
 code { background: #f0f0f0; padding: 1px 3px; font-family: Consolas, monospace; }
 img { max-width: 100%; display: block; margin: 6px auto; }
-figure { margin: 6px 0; }
+figure { margin: 6px 0; break-inside: avoid; page-break-inside: avoid; }
 figure svg { display: block; max-width: 100%; height: auto; }
 ul { margin: 4px 0; }
 </style>
